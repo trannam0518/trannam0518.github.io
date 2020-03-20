@@ -39,5 +39,24 @@
 </script>
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
 <button onclick="execute()">execute</button>
+    <script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        var res = [];
+        $.ajax({
+            type: "GET",
+            datatype:"jsonp",
+            contentType: "application/json;charset=utf-8",
+            processData: true,
+            url: "https://spreadsheets.google.com/feeds/cells/1dGPzaHBV32CheFR3omLwRRHeWlaylFHfYWKD7mMg5HU/1/public/full?alt=json/get_ParentCategory",
+            success: function (data) {
+                res.push(data);
+                array(res);
+            }
+        });
+        function array(arr) {
+            console.log(arr);
+        }
+    });
+</script>
   </body>
 </html>
