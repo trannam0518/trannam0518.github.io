@@ -39,7 +39,9 @@
 </script>
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
 <button onclick="execute()">execute</button>
-    <script>
+<p id="demo"></p>
+
+<script>
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
@@ -49,6 +51,8 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", "json_demo.txt", true);
 xmlhttp.send();
-      <p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
+</script>
+
+<p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
   </body>
 </html>
