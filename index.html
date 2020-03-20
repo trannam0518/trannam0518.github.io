@@ -2,6 +2,7 @@
   <head></head>
   <body>
  <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
   /**
    * Sample JavaScript code for sheets.spreadsheets.get
@@ -39,18 +40,12 @@
 </script>
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
 <button onclick="execute()">execute</button>
-<p id="demo"></p>
-
-<script>
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    document.getElementById("demo").innerHTML = myObj.name;
-  }
-};
-xmlhttp.open("GET", "json_demo.txt", true);
-xmlhttp.send();
+    <script>
+fetch('https://spreadsheets.google.com/feeds/cells/1dGPzaHBV32CheFR3omLwRRHeWlaylFHfYWKD7mMg5HU/1/public/full?alt=json')
+    .then(res => res.json())
+    .then((out) => {
+        console.log('Output: ', out);
+}).catch(err => console.error(err));
 </script>
 
 <p>Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>
