@@ -90,6 +90,7 @@ function tinhcuoc(){
 	
 	//<------ tinh cuoc --->	
 	if(valProvince!=""&&valDistrict!=""&&/^\d+$/.test(valWeight)){
+				var tiencuoc = 0;
 				function ktsokg(kg,tienthem){
 					if(kg==0){return 0;}
 					else if(kg<=0.5){ return tienthem;}
@@ -117,24 +118,27 @@ function tinhcuoc(){
 				if(mientinh =='N'){
 						if(valProvince=="NTNH"){
 								if(valDistrict=="kv3"){
-									return tinhcuoctrongtinh(16500,2500);	
+									tiencuoc =  tinhcuoctrongtinh(16500,2500);	
 								}else{	
-									return tinhcuoctrongtinh(30000,2500);																									
+									tiencuoc = tinhcuoctrongtinh(30000,2500);																									
 								}
 						}else{
 							if(valDistrict =="kv3"){
-								return tinhcuocngoaitinh(35000,35000,2500);							
+								tiencuoc = tinhcuocngoaitinh(35000,35000,2500);							
 							}else{
-								return tinhcuocngoaitinh(25000,30000,2500);																								
+								tiencuoc = tinhcuocngoaitinh(25000,30000,2500);																								
 							}
 						}
 				}else{	
 						if(valDistrict =="kv3"){
-							return tinhcuocngoaitinh(37000,40000,5000);														
+							tiencuoc = tinhcuocngoaitinh(37000,40000,5000);														
 						}else{
-							return tinhcuocngoaitinh(27000,32000,5000);						
+							tiencuoc = tinhcuocngoaitinh(27000,32000,5000);						
 						}
-				}		
+				}
+		
+		return tiencuoc = tiencuoc.toLocaleString()+"VNĐ";
+		
 	}else{
 		return "Vui lòng điền đúng trọng lượng" 
 	}
@@ -155,6 +159,6 @@ $(document).ready(function($) {
 		);
 		$('#action').click(function(){
 			var cuoc = tinhcuoc();
-			document.getElementById("resole").innerHTML = cuoc.toLocaleString("fi-FI")+"VNĐ";
+			document.getElementById("resole").innerHTML = cuoc;
 		})
 })	
