@@ -87,6 +87,7 @@ function tinhcuoc(){
 	var valDistrict = $("#district_from").find('option:selected').val();
 	var valWeight = $("#weight").val();
 	var mientinh = valProvince.substring(0,1);
+	var truocHN = valProvince.substring(valProvince.length-1,valProvince.length);
 	
 	//<------ tinh cuoc --->	
 	if(valProvince!=""&&valDistrict!=""&&/^\d+$/.test(valWeight)){
@@ -129,8 +130,14 @@ function tinhcuoc(){
 								tiencuoc = tinhcuocngoaitinh(25000,30000,2500);																								
 							}
 						}
-				}else{	
-						if(valDistrict =="kv3"){
+				}else{
+						if(mientinh =="B" && truocHN=="T"){
+							if(valDistrict =="kv3"){
+							tiencuoc = tinhcuocngoaitinh(35000,37000,5000);														
+							}else{
+							tiencuoc = tinhcuocngoaitinh(25000,30000,5000);						
+							}
+						}else if(valDistrict =="kv3"){
 							tiencuoc = tinhcuocngoaitinh(37000,40000,5000);														
 						}else{
 							tiencuoc = tinhcuocngoaitinh(27000,32000,5000);						
