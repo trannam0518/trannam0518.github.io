@@ -155,6 +155,6 @@ $(document).ready(function($) {
 		);
 		$('#action').click(function(){
 			var cuoc = tinhcuoc();
-			document.getElementById("resole").innerHTML = cuoc;
+			document.getElementById("resole").innerHTML = cuoc.toLocaleString("fi-FI")+"VNĐ";
 		})
 })	
