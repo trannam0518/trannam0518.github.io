@@ -26,7 +26,7 @@
     $('#example1').DataTable( {
         data: jsonIssues,
         columns: [
-            { title: "Dấu thời gian" },
+            { title: "Dấu thời gian"},
             { title: "Tên facebook" },
             { title: "Họ và tên" },
             { title: "Sô điện thoại." },
