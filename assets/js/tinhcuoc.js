@@ -101,7 +101,7 @@ function tinhcuoc(){
 					if(valWeight<=3000){return tienc}									
 					else{
 						let kgnhap = valWeight/1000;
-						let kgconlai = kgnhap -0.5;
+						let kgconlai = kgnhap -3;
 						var kgtienthem = kgconlai - Math.floor(kgconlai);
 						return tienc + tiencongthem*(Math.floor(kgconlai)/0.5) + ktsokg(kgtienthem,tiencongthem);
 					}	
