@@ -119,9 +119,9 @@ function tinhcuoc(){
 				if(mientinh =='N'){
 						if(valProvince=="NTNH"){
 								if(valDistrict=="kv3"){
-									tiencuoc =  tinhcuoctrongtinh(16500,2500);	
+									tiencuoc =  tinhcuoctrongtinh(30000,2500);	
 								}else{	
-									tiencuoc = tinhcuoctrongtinh(30000,2500);																									
+									tiencuoc = tinhcuoctrongtinh(16500,2500);																									
 								}
 						}else{
 							if(valDistrict =="kv3"){
