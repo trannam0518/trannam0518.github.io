@@ -60,7 +60,7 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#header">Tính cước</a></li>
+          <li class="active"><a href="#header">Tra Bưu Cục & Tính cước</a></li>
           <li><a href="#infoCus">Bảng Khách Hàng Tiềm Năng</a></li>
           <li><a href="#features">Bảng Giao Dịch Thành Công</a></li>
           <li><a href="#gallery">Bảng Không Giao Dịch</a></li>         
@@ -74,28 +74,32 @@
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
-		<form>
-		<div class="form-group">
-		<label for="province_from">Tinh/TP</label>
-			<select class="form-control select2" name="province_from" id="province_from" tabindex="-1" aria-hidden="true">
-			</select>
-	</div>
-	<div class="form-group">
-		<label for="district_from">Quận/Huyện</label>
-				 <select class="form-control select2" name="district_from" id="district_from" tabindex="-1" aria-hidden="true">
-				 </select>                       
-	</div>
-	<div class="form-group" id="form" >
-		<label for="weight">Trọng Lượng: đơn vị gram</label>
-		<input class="form-control" name="weight" id="weight" placeholder="Gram" type="number" min="0" required></input>
-	</div>
-	<div class="form-group">		
-		<input class="form-control btn btn-success" id="action" type = "button" value="Tính Cước"></input>
-		<p></p>
-		<label for="resole">Cước Phí:</label>
-		<h3 class="form-control" name="resole" id="resole"  style="color:red;"></h3>
-	</div>
-	</form>
+      <h2 class="text-center text-danger">TRA BƯU CỤC GIAO HÀNG TIẾT KIỆM</h2>
+      <div class="btn btn-primary d-flex justify-content-center" onclick="showBuucuc()">Xem</div>
+		  <table id="trabuucuc" class="table table-striped table-bordered" ></table>
+		  <form style="margin-top: 100px;">
+        <h2 class="text-center text-danger">TRA CƯỚC GHTK DƯỚI 20kg</h2>
+          <div class="form-group">
+            <label for="province_from">Tinh/TP</label>
+            <select class="form-control select2" name="province_from" id="province_from" tabindex="-1" aria-hidden="true">
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="district_from">Quận/Huyện</label>
+                <select class="form-control select2" name="district_from" id="district_from" tabindex="-1" aria-hidden="true">
+                </select>                       
+          </div>
+          <div class="form-group" id="form" >
+            <label for="weight">Trọng Lượng: đơn vị gram</label>
+            <input class="form-control" name="weight" id="weight" placeholder="Gram" type="number" min="0" required></input>
+          </div>
+          <div class="form-group">		
+            <input class="form-control btn btn-success" id="action" type = "button" value="Tính Cước"></input>
+            <p></p>
+            <label for="resole">Cước Phí:</label>
+            <h3 class="form-control" name="resole" id="resole"  style="color:red;"></h3>
+          </div>
+      </form>
     </div>
 
   </section><!-- End Hero -->
@@ -174,7 +178,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/tinhcuoc.js"></script>
   <script src="assets/js/listCustomer.js"></script>
-
+  <script src="assets/js/trabuucuc.js"></script>
 
 </body>
 
