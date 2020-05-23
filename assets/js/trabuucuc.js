@@ -29,6 +29,12 @@ function showBuucuc(){
 						$("#trabuucuc").DataTable( {
 							data: jsonIssues,
 							columns: title,
+							autoWidth:true,
+							columnDefs: [
+								{ "width": "10px", "targets": [0] },
+								{ "width": "200px", "targets": [1] },        
+								{ "width": "10px", "targets": [2] }
+							  ],
 							"scrollX": true,
 						} );
 						} );

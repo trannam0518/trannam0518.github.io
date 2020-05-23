@@ -33,7 +33,8 @@
 						$(self.table).DataTable( {
 							data: jsonIssues,
 							columns: title,
-							"scrollX": true,
+							order: [ 0, 'desc' ],
+							scrollX: true,
 						} );
 						} );
 					},
